@@ -1,0 +1,17 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'input'}}"/>
+  <view class="page-body">
+    <view class="page-section">
+        <view class="weui-cells_titles"></view>
+        <view>
+          <div class="weui-cells"></div>
+          <div class="weui-cells_after-title"></div>
+        </view>
+    </view>
+    <view class="page-section"></view>
+
+  </view>
+</view>
