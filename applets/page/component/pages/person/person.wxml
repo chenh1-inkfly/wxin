@@ -2,15 +2,23 @@
 <import src="../../../common/foot.wxml" />
 
 <view class="container">
-  <template is="head" data="{{title: 'input'}}"/>
+  <template is="head" data='{{name}}'/>
   <view class="page-body">
-    <view class="page-section">
-        <view class="weui-cells_titles"></view>
-        <view>
-          <div class="weui-cells"></div>
-          <div class="weui-cells_after-title"></div>
-        </view>
+  <view class="page-section">
+    <view class="page-section-title">就诊时间：{{time}}</view>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">就真人:{{name}}</view>
+  </view>
+
+  <view class="page-section">
+    <view class="page-section-title">就诊记录:{{record}}</view>
+    <view class="textarea-wrp">
+      <textarea bindblur="bindTextAreaBlur" auto-height />
     </view>
+  </view>
+
     <view class="page-section"></view>
 
   </view>

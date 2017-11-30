@@ -9,7 +9,7 @@
 	"compileType": "weapp",
 	"libVersion": "1.6.0",
 	"appid": "wxc1faf1f95b96d6fc",
-	"projectname": "demo",
+	"projectname": "inkfly_demo1",
 	"condition": {
 		"weapp": {
 			"current": -1,
