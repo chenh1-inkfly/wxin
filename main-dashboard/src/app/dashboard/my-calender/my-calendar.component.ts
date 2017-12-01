@@ -3,6 +3,7 @@ import {startOfDay, endOfDay, subDays, addDays, endOfMonth, isSameDay, isSameMon
 import { Subject } from 'rxjs/Subject';
 import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
+
 import {CalendarEvent, CalendarEventAction, CalendarEventTimesChangedEvent} from 'angular-calendar';
 
 const colors: any = {
@@ -40,6 +41,8 @@ export class MyCalendarComponent {
 
   view: string = 'month';
 
+  locale: string = 'zh';
+
   viewDate: Date = new Date();
 
   modalData: {
@@ -69,26 +72,26 @@ export class MyCalendarComponent {
     {
       start: subDays(startOfDay(new Date()), 1),
       end: addDays(new Date(), 1),
-      title: 'A 3 day event',
+      title: '一个三天的任务',
       color: colors.red,
       actions: this.actions
     },
     {
       start: startOfDay(new Date()),
-      title: 'An event with no end date',
+      title: '没有截至日期的任务',
       color: colors.yellow,
       actions: this.actions
     },
     {
       start: subDays(endOfMonth(new Date()), 3),
       end: addDays(endOfMonth(new Date()), 3),
-      title: 'A long event that spans 2 months',
+      title: '持续两周的任务',
       color: colors.blue
     },
     {
       start: addHours(startOfDay(new Date()), 2),
       end: new Date(),
-      title: 'A draggable and resizable event',
+      title: '一个弹性任务',
       color: colors.yellow,
       actions: this.actions,
       resizable: {
